@@ -101,11 +101,15 @@ class Bike extends Component {
           </span>
         </div>
 
-        <ul id="bikeLocations">
-          {this.renderBikeLocations()}
-        </ul>
+        { !this.state.msg ?
+          <ul id="bikeLocations">
+            {this.renderBikeLocations()}
+          </ul> :
+          <p>{this.state.msg}</p>
+        }
 
-        <p>{this.state.msg}</p>
+
+
       </div>
     );
   }
